@@ -1,0 +1,1 @@
+{"version":3,"sources":["pod.ts"],"names":[],"mappings":"","file":"pod.js","sourcesContent":["export interface IPod {\r\n  id: number,\r\n    managerId: number,\r\n    podName: string,\r\n    numberOfPlayers: number\r\n}\r\n"]}

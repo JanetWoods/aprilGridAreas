@@ -1,0 +1,1 @@
+{"version":3,"sources":["pro-team.ts"],"names":[],"mappings":"","file":"pro-team.js","sourcesContent":["export interface IProTeam {\r\n  id: number,\r\n  abbr: string,\r\n  proTeamName: string,\r\n  picpath:string\r\n}\r\n"]}
