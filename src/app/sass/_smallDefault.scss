@@ -1,0 +1,15 @@
+// prevent adjustment of font size after orientation changes in IE on iOS
+html{
+  -webkit-text-size-adjust: 100%;
+}
+
+//Applies a natural box layout model to all elements
+*{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+body{
+  font-family: $defaultFont;
+}
