@@ -27,7 +27,7 @@ main {
 }
 .proTeams{
   display: grid;
-  grid-area: "main";
+  grid-area: main;
   margin-left: $gutter*2;
   column-gap: 1%;
   row-gap: .5rem;
@@ -48,7 +48,7 @@ nav{
   }
   ul li {
     display: block;
-    width: auto;
+    width: 20vw;
   }
 
 }
@@ -70,7 +70,7 @@ nav{
 div.footer{
   display: grid;
   background-color: blue;
-  grid-area: "footer";
+  grid-area: footer;
   position: relative;
 }
 
