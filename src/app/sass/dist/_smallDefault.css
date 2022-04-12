@@ -1,0 +1,52 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto 2rem;
+  margin: .5rem 2% .5rem 4%;
+  column-gap: 1%;
+  row-gap: .5%;
+  grid-template-areas: "nav" "main" "main" "main" "footer";
+}
+
+.proTeams {
+  display: grid;
+  grid-area: "main";
+  width: 98vw;
+}
+
+nav {
+  grid-area: nav;
+  background-color: gray;
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+nav ul li a {
+  display: grid;
+  justify-items: center;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.footer {
+  display: grid;
+  background-color: blue;
+  grid-area: "footer";
+  position: relative;
+}
+
+/*# sourceMappingURL=_smallDefault.css.map */

@@ -9,6 +9,7 @@ import { BlogComponent } from './blog/blog.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './routing/routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './routing/routing.module';
     ProplayersComponent,
     NewsComponent,
     BlogComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
