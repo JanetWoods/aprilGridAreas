@@ -1,3 +1,43 @@
-main{
-  background-color: lightgreen;
+
+main {
+  background-color: $backgroundColorMed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2rem auto 2rem;
+  margin: .5rem 2% .5rem 4%;
+  column-gap: 1%;
+  row-gap: .5%;
+  grid-template-areas:
+  "nav nav nav"
+  "content  content content"
+  "content content content"
+  "content content content"
+  "footer footer footer"
 }
+ main .news{
+    margin-bottom: 1.75rem;
+    grid-area: main;
+  }
+  .blog{
+    margin-bottom: 1.75rem;
+    grid-area: main;
+  }
+nav button#hamburgerBtn{
+  display: block;
+}
+
+
+nav{
+  grid-area: nav;
+  background-color: gray;
+  position: relative;
+  // margin-bottom: .5rem;
+  ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  ul li {
+    width: auto;
+  }
+}
+
