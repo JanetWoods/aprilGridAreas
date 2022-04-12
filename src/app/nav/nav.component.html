@@ -1,6 +1,9 @@
 <nav class="clearfix">
-  <ul>
-    <li class="active">
+  <button id="hamburgerBtn" (click)="toggleMenu()"
+    [class.open]="open"
+  ></button>
+  <ul [class.open]="open" id="primaryNav" class="Parent">
+    <li>
       <a
         href="proplayer"
         [routerLink]="['/proplayer']"
@@ -49,4 +52,3 @@
     </li>
   </ul>
 </nav>
-<footer></footer>

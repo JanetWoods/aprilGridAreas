@@ -1,9 +1,23 @@
-<div id="wrapper">
+<div class="wrapper">
+  <div class="proTeams">
+    <div class="proTeamHeader">
       <label for="filter">Search Teams: </label>
-      <input [(ngModel)]="listFilter" type="text">
-<main>
-  <div *ngFor="let team of filteredTeams">
-    {{team.proTeamName}}
+      <input [(ngModel)]="listFilter" type="text" />
+      <button (click)="togglePics()">
+        {{ showImage ? "Hide" : "Show" }} Pics
+      </button>
+    </div>
+    <main>
+      <div *ngFor="let team of filteredTeams">
+        <div class="card">
+          <div class="card-header">
+            {{ team.proTeamName }}
+          </div>
+          <div class="card-body">
+            <img *ngIf="showImage" [src]="team.picpath" />
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
-</main>
 </div>
