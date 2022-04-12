@@ -15,6 +15,7 @@ export class ProplayersComponent implements OnInit {
 
   ngOnInit(): void {
     this.listFilter = '';
+
   }
 
   get listFilter() {

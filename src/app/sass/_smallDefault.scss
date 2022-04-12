@@ -11,67 +11,119 @@ html {
 }
 
 main {
+  background-color: $backgroundColorSmall;
   width: 90vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
-  margin: .5rem 2% .5rem 4%;
+  margin: 0.5rem 2% 0.5rem 4%;
   column-gap: 1%;
-  row-gap: .5%;
+  row-gap: 1%;
   grid-template-areas:
-  "nav"
-  "main"
-  "main"
-  "main"
-  "footer"
+    "nav"
+    "content"
+    "content"
+    "content"
+    "footer";
 }
-.proTeams{
+.proTeams {
   display: grid;
-  grid-area: main;
-  margin-left: $gutter*2;
+  grid-area: content;
+  margin-left: $gutter * 2;
   column-gap: 1%;
-  row-gap: .5rem;
-  margin-bottom: 2.75rem;
+  row-gap: 0.5rem;
+  margin-top: 2rem;
 }
-nav{
+.proPlayers {
+  display: grid;
+  grid-area: content;
+  margin-left: $gutter * 2;
+  column-gap: 1%;
+  row-gap: 0.5rem;
+  margin-top: 2rem;
+}
+nav {
   grid-area: nav;
-  // display: flex;
-  background-color: gray;
-  position: fixed;
-  bottom: 0;
+  // display: block;
+  background-color: $menuColor;
   width: 100vw;
-  ul{
-    flex-basis: 20%;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-  ul li {
+  // position: fixed;
+  // bottom: 0;
+  // margin-bottom: 4%;
+  // ul {
+  //   flex-basis: 20%;
+  //   width: 100%;
+  //   text-align: center;
+  //   display: grid;
+  //   margin-bottom: 3%;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  // }
+  // ul li {
+  //   display: block;
+  //   width: 20vw;
+  // }
+
+  ul li a {
     display: block;
-    width: 20vw;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    width: 100%;
+    padding: 0.75rem $gutter;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.75s ease;
   }
 
+  ul li.acitve a {
+    color: black;
+      background-color: rgba(255, 255, 255, 0.4);
+    font-size: large;
+  }
+  // .active a {
+  //   color: black;
+  //   background-color: rgba(255, 255, 255, 0.4);
+  // }
 }
-.news{
-  margin-bottom: 1.75rem;
-  grid-area: main;
+.news {
+  display: grid;
+  margin-top: 2%;
+  grid-area: content;
 }
-.blog{
-  margin-bottom: 1.75rem;
-  grid-area: main;
+.teams {
+  margin-top: 2%;
+  display: grid;
+  grid-area: content;
 }
-  ///clearfix anywhere needed
+.blog {
+  display: grid;
+  margin-top: 2rem;
+  grid-area: content;
+}
+///clearfix anywhere needed
 
-  .clearfix:after {
-    content: "";
-    display: table;
+.clearfix:after {
+  content: "";
+  display: table;
   clear: both;
 }
-div.footer{
+div.footer {
   display: grid;
   background-color: blue;
   grid-area: footer;
   position: relative;
 }
 
-
+.hamburger {
+  display: block;
+  width: 7rem;
+  height: 2.75rem;
+  background-repeat: no-repeat;
+  background-position: 2vw center;
+}
+a.hamburgerOpen {
+  @extend .hamburger;
+  background-image: url(../../assets/images/menuOpenWhite.png);
+}
+a.hamburgerClose {
+  @extend .hamburger;
+  background-image: url(../../assets/images/menuCloseWhite.png);
+}

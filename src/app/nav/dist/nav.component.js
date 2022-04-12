@@ -12,6 +12,9 @@ var NavComponent = /** @class */ (function () {
         this.open = false;
     }
     NavComponent.prototype.ngOnInit = function () { };
+    NavComponent.prototype.ngOnChanges = function () {
+        this.open = false;
+    };
     NavComponent.prototype.toggleMenu = function () {
         if (this.open) {
             console.log('it was open, now it should close');

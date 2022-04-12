@@ -2,7 +2,7 @@ main {
   background-color: aqua;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 2rem auto 2rem;
   margin: .5rem 2% .5rem 4%;
   column-gap: 1%;
   row-gap: .5%;
@@ -17,6 +17,10 @@ main .news {
 .blog {
   margin-bottom: 1.75rem;
   grid-area: main;
+}
+
+nav button#hamburgerBtn {
+  display: none;
 }
 
 nav {
