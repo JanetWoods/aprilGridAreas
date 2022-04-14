@@ -1,20 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../src/app/sass/reset';
+
 @import '../src/app/sass/variables';
 
 @import '../src/app/sass/smallDefault';
 
-@media only screen and (max-width: 64rem) {
+// Max width must be 1px less than the medium css breakpoint
+@media only screen and (max-width: 34.9375rem){
   @import '../src/app/sass/mobilemenu';
 }
+
 
 @media only screen and (min-width: 35rem) {
   @import '../src/app/sass/medium';
 }
 
-
-@media only screen and (min-width: 64.01rem){
+@media only screen and (min-width: 64.0625rem){
   @import '../src/app/sass/large';
 }
 
-@import '../src/app/sass/huge';
+@media only screen and (min-width: 95rem){
+  @import '../src/app/sass/huge';
+}
