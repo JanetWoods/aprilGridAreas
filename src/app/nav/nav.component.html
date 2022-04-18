@@ -1,58 +1,60 @@
 <nav class="clearfix">
-  <button id="hamburgerBtn" (click)="toggleMenu()"
-    [class.open]="open"
-  >
+  <button id="hamburgerBtn" (click)="toggleMenu()" [class.open]="open">
+    <ul [class.open]="open" id="primaryNav" class="closed">
+      <li>
+        <a href="#">The Pros</a>
+        <ul>
+          <li>
+            <a
+              href="proplayer"
+              [routerLink]="['/proplayer']"
+              routerLinkActive="router-link-active"
+            >
+              ProPlayers
+            </a>
+          </li>
 
-  <ul [class.open]="open" id="primaryNav" class="Parent clearfix">
-    <li>
-      <a
-        href="proplayer"
-        [routerLink]="['/proplayer']"
-        routerLinkActive="router-link-active"
-      >
-        ProPlayers
-      </a>
-    </li>
+          <li>
+            <a
+              href="proteams"
+              [routerLink]="['/proteams']"
+              routerLinkActive="router-link-active"
+            >
+              ProTeams
+            </a>
+          </li>
+        </ul>
+      </li>
 
-    <li>
-      <a
-        href="proteams"
-        [routerLink]="['/proteams']"
-        routerLinkActive="router-link-active"
-      >
-        ProTeams
-      </a>
-    </li>
-
-    <li>
-      <a
-        href="teams"
-        [routerLink]="['/teams']"
-        routerLinkActive="router-link-active"
-      >
-        Teams
-      </a>
-    </li>
-    <li>
-      <a
-        href="news"
-        [routerLink]="['/news']"
-        routerLinkActive="router-link-active"
-      >
-        News
-      </a>
-    </li>
-    <li>
-      <a
-        href="blog"
-        [routerLink]="['/blog']"
-        routerLinkActive="router-link-active"
-      >
-        Blog
-      </a>
-    </li>
-  </ul>
-</button>
+      <li>
+        <a
+          href="teams"
+          [routerLink]="['/teams']"
+          routerLinkActive="router-link-active"
+        >
+          Teams
+        </a>
+      </li>
+      <li>
+        <a
+          href="news"
+          [routerLink]="['/news']"
+          routerLinkActive="router-link-active"
+        >
+          News
+        </a>
+      </li>
+      <li>
+        <a
+          href="blog"
+          [routerLink]="['/blog']"
+          routerLinkActive="router-link-active"
+        >
+          Blog
+        </a>
+      </li>
+    </ul>
+  </button>
 </nav>
 
 <nav class="notSmall">

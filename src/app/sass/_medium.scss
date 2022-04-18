@@ -1,6 +1,6 @@
 
 main {
-  background-color: $backgroundColorMed;
+  background-color: $terinaryColor;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2rem auto 2rem;
@@ -29,9 +29,9 @@ nav button#hamburgerBtn{
 
 nav{
   grid-area: nav;
-  background-color: gray;
+  background-color: $primaryColor;
   position: relative;
-  // margin-bottom: .5rem;
+  margin-bottom: .5rem;
   ul{
     display: grid;
     grid-template-columns: auto auto auto auto auto;

@@ -11,11 +11,12 @@
 }
 
 
-@media only screen and (min-width: 35rem) {
+@media only screen and (min-width: 30rem) {
   @import '../src/app/sass/medium';
 }
 
-@media only screen and (min-width: 64.0625rem){
+// should break at 64.0625rem
+@media only screen and (min-width: 50rem){
   @import '../src/app/sass/large';
 }
 

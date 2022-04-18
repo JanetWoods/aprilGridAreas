@@ -1,7 +1,6 @@
 /*Change the menubar color on line 23 */
 /*Change the dropdown menu color on line 49*/
 /*If you have a light background color then change the background image on lines 30 and 37 to load menuOpenBlack and menuCloseBlack*/
-/*Adjust the media query max-width value on line 12 to match your breakpoint between the small and medium screens OR between the medium and large screens*/
 
 /*  apply a natural box layout model to all elements  */
 * {
@@ -31,7 +30,7 @@ nav {
   width: 7rem;
   height: 2.75rem;
   background-image: url("../../assets/images/menuOpenWhite.png");
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: $menuColor;
   background-position: 2vw center;
   background-repeat: no-repeat;
   border: 0 none;
@@ -48,7 +47,7 @@ nav {
   height: 0;
   overflow: hidden;
   width: 90vw;
-  background-color: #ba3659; /* change the menu color */
+  background-color: $secondaryColor; /* change the menu color */
   margin: 0;
   padding: 0;
   z-index: 998;
@@ -56,7 +55,7 @@ nav {
   font-weight: normal;
 }
 #primaryNav li.active a {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: $secondaryColor;
 }
 #primaryNav li a {
   display: block;
@@ -64,12 +63,12 @@ nav {
   padding: 0.75rem 2vw;
   font-size: 14px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
-  color: white;
+  color: $menuColor;
   text-decoration: none;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 #primaryNav li a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $secondaryColor;
 }
 
 /* Toggle the navigation bar to expand down  */
@@ -84,11 +83,11 @@ nav {
 #primaryNav li.parent > a:after {
   font-size: 0.75rem;
   content: "\25BC";
-  color: rgba(255, 255, 255, 0.5);
+  color: $primaryColor;
   float: right;
 }
 #primaryNav li.parent > a:hover {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
 }
 /*hide the sub menu items by default*/
 #primaryNav li ul {
@@ -104,4 +103,17 @@ nav {
 }
 #primaryNav li:hover ul {
   display: block;
+}
+ul li a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  padding: .6rem 2%;
+}
+ul li ul li a{
+  padding-left: 8%;
+}
+ul li.active >a{
+  background-color: black;
 }
